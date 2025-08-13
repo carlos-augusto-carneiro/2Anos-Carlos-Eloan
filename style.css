@@ -1,0 +1,94 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+
+:root {
+  --dark-color: #000;
+}
+
+body {
+  /* Usando o display flex para centralizar os papéis */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Estilos do fundo escuro */
+  min-height: 100vh;
+  background-color: var(--dark-color);
+  overflow: hidden; /* Esconde qualquer coisa que saia da tela */
+}
+.night {
+  position: fixed; /* Fica fixo no fundo */
+  z-index: -1;     /* Garante que ele fique atrás de todos os outros elementos */
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  filter: blur(0.1vmin);
+  background-image:
+    radial-gradient(ellipse at top, transparent 0%, var(--dark-color)),
+    radial-gradient(ellipse at bottom, var(--dark-color), rgba(145, 233, 255, 0.2)),
+    repeating-linear-gradient(220deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px),
+    repeating-linear-gradient(189deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px),
+    repeating-linear-gradient(148deg, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 19px, transparent 19px, transparent 22px),
+    linear-gradient(90deg, rgb(0, 255, 250), rgb(240, 240, 240));
+}
+.paper {
+  background-image: url("imagens/6706c440-63e8-4b57-8109-5c3f307fce3e.jpg");
+  background-size: 500px;
+  background-position: center center;
+  padding: 20px 100px;
+  transform: rotateZ(-5deg);
+  box-shadow: 1px 15px 20px 0px rgba(173, 173, 173, 0.404);
+  position: absolute;
+}
+.paper.heart {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  padding: 0;
+  border-radius: 50%;
+}
+.paper.image {
+  padding: 10px;
+}
+.paper.image p {
+  font-size: 30px;
+}
+img {
+  max-height: 400px;
+  max-width: 300px;
+  width: 100%;
+  user-select: none;
+}
+.paper.heart::after {
+  content: "";
+  background-image: url('https://cdn.pixabay.com/photo/2016/03/31/19/25/cartoon-1294994__340.png');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: 150px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+}
+.paper.red {
+/*   filter: hue-rotate(90deg); */
+}
+.paper:nth-of-type(3n) {
+  background-position: left top;
+}
+.paper:nth-of-type(3n) {
+/*   filter: hue-rotate(200deg); */
+}
+p {
+  font-family: 'Zeyada';
+  font-size: 50px;
+  color: rgb(255, 255, 255);
+  opacity: 0.75;
+  user-select: none;
+  
+}
+
