@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
 
 :root {
   --dark-color: #000;
@@ -15,6 +15,11 @@ body {
   min-height: 100vh;
   background-color: var(--dark-color);
   overflow: hidden; /* Esconde qualquer coisa que saia da tela */
+}
+.cedarville-cursive-regular {
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 .night {
   position: fixed; /* Fica fixo no fundo */
@@ -84,7 +89,7 @@ img {
 /*   filter: hue-rotate(200deg); */
 }
 p {
-  font-family: 'Zeyada';
+  font-family: 'Cedarville Cursive', 'Dancing Script', 'Brush Script MT', cursive, sans-serif;
   font-size: 50px;
   color: rgb(255, 255, 255);
   opacity: 0.75;
